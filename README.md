@@ -47,12 +47,6 @@ the `src/providers/api.tsx` file with your project id and endpoint.
 - data
   - settings.ts : Settings for the user, add to this for a settings page or something.
   - index.ts : Re-exports Settings as well as providing a Key/Value store for memory and fallback to localStorage.
-- extensions : Extensions breakdown below.
-  - array.ts
-  - number.ts
-  - object.ts
-  - string.ts
-  - index.ts
 - locale
   - en.ts : English translations.
   - index.ts : Exports translation based on location (if you were to code it that way, good switch-statements to ya)
@@ -73,36 +67,6 @@ the `src/providers/api.tsx` file with your project id and endpoint.
 - main.tsx : Entry point for the application
 - index.d.ts : App types
 - vite-env.d.ts : Vite types
-
-## Extensions
-> I extending a few things because I wanted a few things more
-> and my nature is to make something like I like it.
-> Note: I only extend prototypes for immutable methods, so no worries about breaking loops and things.
-
-### Array
-- `Array.prototype.first()` : Returns the first item in the array.
-- `Array.prototype.last()` : Returns the last item in the array.
-
-### Number
-- `Number.prototype.toArray()` : Returns an array with a length of the provided number.
-
-### Object
-- `Object.hasKey(object, key)` : Returns true if the object has the key.
-- `Object.remove(object, key)` : Returns a new object without the key.
-- `Object.snakeCaseKeys(object, key)` : Returns a new object with snake cased keys.
-- `Object.camelCaseKeys(object, key)` : Returns a new object with camel cased keys.
-
-### String
-- `String.prototype.format` : Returns a formated string with the provided arguments, inspired by `printf`.
-- `String.prototype.words()` : Returns an array of words from a string.
-- `String.prototype.uppercaseSentence` : Returns a string with first letter, of each word, is uppercase.
-- `String.prototype.uppercaseWord` : Returns a string where the first letter of every word is uppercase.
-- `String.prototype.snakeCase` : Returns a string that has been converted to `snake_case`.
-- `String.prototype.camelCase` : Returns a string that has been convert to `camelCase`.
-- `String.prototype.linkify` : Returns a string that detects urls and makes them `<a href>` style links.
-- `String.prototype.stripHtml` : Returns a string where all html has been removed.
-
-And that's it for extensions.
 
 ### Reach out
 > Im always open to suggestions and such, so feel free to make an `issue` or `PR` if you have something you want to add or change. 
